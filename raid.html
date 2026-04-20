@@ -154,7 +154,8 @@ h1{font-size:20px;color:#aaa;margin-bottom:16px}
   <a href="./tier.html" class="tab-btn">Tier List</a>
   <a href="./dex.html" class="tab-btn">Dragon Dex</a>
   <a href="./sss.html" class="tab-btn">SSS Ranking</a>
-  <a href="./raid.html" class="tab-btn">아르하 입구</a>
+  <a href="./raid.html" class="tab-btn">Arha Gate</a>
+  <a href="./raid.html" class="tab-btn">Raid Info</a>
 </div>
 
 <div style="display:flex;gap:0;border-bottom:1px solid #333;margin-bottom:16px">
@@ -249,7 +250,7 @@ h1{font-size:20px;color:#aaa;margin-bottom:16px}
     <div class="pattern-item boss-deathlock" style="display:none">
       <div>
         <div class="pattern-name">(5) DEF x1.5 Buff</div>
-        <div class="pattern-desc">Ally DEF x1.5 increase (★★☆)</div>
+        <div class="pattern-desc">Ally DEF x1.5 increase</div>
         <div class="pattern-cond">Earth x2 · DEF x2</div>
       </div>
     </div>
@@ -357,7 +358,7 @@ h1{font-size:20px;color:#aaa;margin-bottom:16px}
   <div class="pattern-grid">
     <div class="pattern-item">
       <div>
-        <div class="pattern-name">(1) HP Recovery + 광역 전환</div>
+        <div class="pattern-name">(1) HP Recovery + area attack</div>
         <div class="pattern-desc">HP regen on attack + all attacks become AoE</div>
         <div class="pattern-cond">Dark x3 · HP-ATK x3</div>
       </div>
@@ -906,7 +907,7 @@ function removeDragon(playerIdx, name) {
 function renderList(playerIdx) {
   const el = document.getElementById('list-'+playerIdx);
   const list = playerDragons[playerIdx];
-  if(!list.length) { el.innerHTML = '<div style="font-size:11px;color:#555;padding:4px">드래곤을 추가하세요</div>'; return; }
+  if(!list.length) { el.innerHTML = '<div style="font-size:11px;color:#555;padding:4px">select dragon</div>'; return; }
   el.innerHTML = list.map((d,idx) => {
     return `<div class="dragon-tag">
       <div class="dragon-tag-info">
