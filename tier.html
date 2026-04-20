@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Transcendence Tier List</title>
+<title>Tier List</title>
 <style>
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -44,7 +44,6 @@ body{font-family:'Malgun Gothic',sans-serif;background:#1a1a2e;color:#eee;paddin
 
 /* 패널 */
 .panel{border-radius:10px;overflow:hidden;border:1px solid #333}
-.panel-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .panel-header{display:flex;align-items:center;gap:10px;padding:10px 14px;font-size:15px;font-weight:700}
 .panel-header .elem-icon{width:36px;height:36px;border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:20px;background:rgba(0,0,0,0.2)}
 .panel-header .elem-icon img{width:100%;height:100%;object-fit:cover}
@@ -61,11 +60,11 @@ body{font-family:'Malgun Gothic',sans-serif;background:#1a1a2e;color:#eee;paddin
 .panel-Nightmare .panel-header{background:linear-gradient(90deg,#4a148c,#7b1fa2)}
 
 /* 테이블 */
-.panel table{width:100%;border-collapse:collapse;font-size:12px;background:#1e1e30;min-width:320px}
+.panel table{width:100%;border-collapse:collapse;font-size:11px;background:#1e1e30;min-width:0}
 .panel thead tr{background:#252538}
-.panel th{padding:6px 8px;text-align:center;font-weight:500;color:#aaa;border-bottom:1px solid #333;white-space:nowrap;font-size:11px}
+.panel th{padding:5px 4px;text-align:center;font-weight:500;color:#aaa;border-bottom:1px solid #333;white-space:nowrap;font-size:10px}
 .panel th.left{text-align:left}
-.panel td{padding:5px 8px;border-bottom:0.5px solid #2a2a3e;vertical-align:middle;color:#ddd}
+.panel td{padding:4px 4px;border-bottom:0.5px solid #2a2a3e;vertical-align:middle;color:#ddd}
 .panel td.center{text-align:center}
 .panel tr:hover td{background:#252540}
 
@@ -73,8 +72,8 @@ body{font-family:'Malgun Gothic',sans-serif;background:#1a1a2e;color:#eee;paddin
 .rank{font-size:11px;color:#888;text-align:center;width:24px}
 
 /* 드래곤 이미지 */
-.dragon-img{width:36px;height:36px;border-radius:6px;object-fit:cover;display:block}
-.img-placeholder{width:36px;height:36px;border-radius:6px;background:#2a2a3e;border:1px dashed #444;display:flex;align-items:center;justify-content:center;color:#555;font-size:10px}
+.dragon-img{width:30px;height:30px;border-radius:5px;object-fit:cover;display:block}
+.img-placeholder{width:30px;height:30px;border-radius:6px;background:#2a2a3e;border:1px dashed #444;display:flex;align-items:center;justify-content:center;color:#555;font-size:10px}
 
 /* Type 뱃지 */
 .badge-type{font-size:10px;padding:2px 5px;border-radius:6px;background:#2e2e4a;color:#aaa;white-space:nowrap}
@@ -638,17 +637,17 @@ function render(){
         ${iconHtml}
         <span>${cfg.label}</span>
       </div>
-      <div class="panel-table-wrap"><table>
+      <table>
         <thead><tr>
-          <th style="width:24px"></th>
-          <th style="width:42px"></th>
+          <th style="width:20px"></th>
+          <th style="width:36px"></th>
           <th class="center">Type</th>
           <th class="left">Dragon</th>
           <th class="center">Lv.Up</th>
-          <th class="center">Grade</th>
+          <th class="center" style="min-width:48px">Grade</th>
         </tr></thead>
         <tbody>${rows}</tbody>
-      </table></div>`;
+      </table>`;
     panels.appendChild(panel);
   });
 
