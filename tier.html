@@ -61,7 +61,7 @@ body{font-family:'Malgun Gothic',sans-serif;background:#1a1a2e;color:#eee;paddin
 .panel-Nightmare .panel-header{background:linear-gradient(90deg,#4a148c,#7b1fa2)}
 
 /* 테이블 */
-.panel table{width:100%;border-collapse:collapse;font-size:12px;background:#1e1e30;min-width:280px}
+.panel table{width:100%;border-collapse:collapse;font-size:12px;background:#1e1e30;min-width:320px}
 .panel thead tr{background:#252538}
 .panel th{padding:6px 8px;text-align:center;font-weight:500;color:#aaa;border-bottom:1px solid #333;white-space:nowrap;font-size:11px}
 .panel th.left{text-align:left}
@@ -629,7 +629,7 @@ function render(){
         <td class="center"><span class="badge-type">${d.t}</span></td>
         <td style="font-size:12px;font-weight:500">${d.n}</td>
         <td class="center ${d.lv==='O'?'lv-o':'lv-x'}">${d.lv}</td>
-        <td class="center ${tierClass(d.g)}">${Number.isInteger(d.g)?d.g.toFixed(1):d.g}</td>
+        <td class="center ${tierClass(d.g)}" style="white-space:nowrap;min-width:48px">${Number.isInteger(d.g)?d.g.toFixed(1):d.g}</td>
       </tr>`;
     });
 
