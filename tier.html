@@ -44,6 +44,7 @@ body{font-family:'Malgun Gothic',sans-serif;background:#1a1a2e;color:#eee;paddin
 
 /* 패널 */
 .panel{border-radius:10px;overflow:hidden;border:1px solid #333}
+.panel-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .panel-header{display:flex;align-items:center;gap:10px;padding:10px 14px;font-size:15px;font-weight:700}
 .panel-header .elem-icon{width:36px;height:36px;border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:20px;background:rgba(0,0,0,0.2)}
 .panel-header .elem-icon img{width:100%;height:100%;object-fit:cover}
@@ -60,7 +61,7 @@ body{font-family:'Malgun Gothic',sans-serif;background:#1a1a2e;color:#eee;paddin
 .panel-Nightmare .panel-header{background:linear-gradient(90deg,#4a148c,#7b1fa2)}
 
 /* 테이블 */
-.panel table{width:100%;border-collapse:collapse;font-size:12px;background:#1e1e30;min-width:0}
+.panel table{width:100%;border-collapse:collapse;font-size:12px;background:#1e1e30;min-width:280px}
 .panel thead tr{background:#252538}
 .panel th{padding:6px 8px;text-align:center;font-weight:500;color:#aaa;border-bottom:1px solid #333;white-space:nowrap;font-size:11px}
 .panel th.left{text-align:left}
@@ -205,7 +206,7 @@ tr:hover td{background:#252540!important}
   <span class="title-main">Main</span>
   <span class="title-sub">made by nix</span>
 </a>
-  <a href="./tier.html" class="tab-btn active">Tier List</a>
+  <a href="./tier.html" class="tab-btn active">Transcendence Tier List</a>
   <a href="./dex.html" class="tab-btn">Dragon Dex</a>
   <a href="./sss.html" class="tab-btn">SSS Ranking</a>
   <a href="./raid.html" class="tab-btn">Arha Gate</a>
@@ -637,7 +638,7 @@ function render(){
         ${iconHtml}
         <span>${cfg.label}</span>
       </div>
-      <table>
+      <div class="panel-table-wrap"><table>
         <thead><tr>
           <th style="width:24px"></th>
           <th style="width:42px"></th>
@@ -647,7 +648,7 @@ function render(){
           <th class="center">Grade</th>
         </tr></thead>
         <tbody>${rows}</tbody>
-      </table>`;
+      </table></div>`;
     panels.appendChild(panel);
   });
 
